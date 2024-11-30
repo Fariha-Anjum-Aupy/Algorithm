@@ -1,0 +1,6 @@
+Size	Linear Iterative (Time, Steps)	Linear Recursive (Time, Steps)	Binary Iterative (Time, Steps)	Binary Recursive (Time, Steps)
+1000	(0 ms, 501 steps)	(0 ms, 501 steps)	(0 ms, 9 steps)	(0 ms, 9 steps)
+2000	(0 ms, 1001 steps)	(0 ms, 1001 steps)	(0 ms, 10 steps)	(0 ms, 10 steps)
+3000	(0 ms, 1501 steps)	(0 ms, 1501 steps)	(0 ms, 11 steps)	(0 ms, 11 steps)
+4000	(0 ms, 2001 steps)	(0 ms, 2001 steps)	(0 ms, 11 steps)	(0 ms, 11 steps)
+5000	(0 ms, 2501 steps)	(0 ms, 2501 steps)	(0 ms, 12 steps)	(0 ms, 12 steps)

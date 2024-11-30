@@ -1,13 +1,13 @@
 #include <bits/stdc++.h> 
 using namespace std;
 
-void generateRandomData(const string &filename, int size){
+void generateRandomData(const string &filename, int n){
     ofstream file(filename);
     vector<int> data;
-    for (int i = 0; i < size; i++){
+    for (int i = 0; i < n; i++){
         data.push_back(rand() % 50000 + 1);
     }
-    for (int i = 0; i < size; i++){
+    for (int i = 0; i < n; i++){
         file << data[i] << " ";
     }
     file.close();
@@ -43,18 +43,22 @@ pair<int, int> MaxMin(const vector<int> &data, int n){
 }
 
 int main(){
-    int size;
+    int n;
     cout << "Enter the number of elements : ";
-    cin >> size;
+    cin >> n;
+
     string filename = "random_values.txt";
-    generateRandomData(filename, size);
+    generateRandomData(filename, n);
     vector<int> data = readFile(filename);
+
     auto start = chrono::high_resolution_clock::now();
-    pair<int, int> result = MaxMin(data, size);
+    pair<int, int> result = MaxMin(data, n);
     auto end = chrono::high_resolution_clock::now();
+
     auto time = chrono::duration_cast<chrono::microseconds>(end - start).count();
-    cout << "Maximum element in Vector : " << result.first << endl;
-    cout << "Minimun element in vector : " << result.second << endl;
+
+    cout << "Maximum element : " << result.first << endl;
+    cout << "Minimun element : " << result.second << endl;
     cout << "Time taken by Max and Min : " << time << " microseconds" << endl;
     return 0;
 }

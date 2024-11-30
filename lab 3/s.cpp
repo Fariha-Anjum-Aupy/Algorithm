@@ -62,7 +62,6 @@ int main(){
             file >> x;
 
             sort(v1.begin(), v1.end());
-            count1 = count2 = count3 = count4 = 0;
 
             // Linear search (iterative)
             int result1 = linearSearch(v1, x);
