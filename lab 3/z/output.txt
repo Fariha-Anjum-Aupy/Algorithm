@@ -1,0 +1,9 @@
+itrative Linear Search:
+Element found at position 139
+Number of comparisons (itrative): 139
+Time taken (itrative): 0 ns
+
+recursive Linear Search:
+Element found at position 100000
+Number of comparisons (rec): 1
+Time taken (recursive): 0 ns
