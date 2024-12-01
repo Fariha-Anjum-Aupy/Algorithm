@@ -35,22 +35,22 @@ pair<double, vector<double>> knapsack(int cap, const vector<int> &w, const vecto
 }
 
 int main(){
-    ifstream inputfile("input.txt");
+    ifstream file("input.txt");
 
-    int knapsackSize = 20;
+    int capacity = 20;
     int n;
-    inputfile >> n;
+    file >> n;
 
-    vector<int> weight(n);
-    vector<int> profit(n);
+    vector<int> weight(n), profit(n);
+
     for (int j = 0; j < n; j++){
-        inputfile >> weight[j]; 
+        file >> weight[j]; 
     }
     for (int j = 0; j < n; j++){
-        inputfile >> profit[j];
+        file >> profit[j];
     }
 
-    pair<double, vector<double>> result = knapsack(knapsackSize, weight, profit);
+    pair<double, vector<double>> result = knapsack(capacity, weight, profit);
     double maxProfit = result.first;
     vector<double> frac = result.second;
     

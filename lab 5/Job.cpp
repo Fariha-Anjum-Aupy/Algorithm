@@ -5,22 +5,22 @@ const int MAX_JOBS = 105;
 int profit[MAX_JOBS], deadline[MAX_JOBS];
 
 int main(){
-    ifstream input_file("jobs.txt");  
-        if (!input_file) {
+    ifstream file("jobs.txt");  
+        if (!file) {
         cerr << "Error: Could not open the file!" << endl;
         return 1;
     }
 
     int n;
-    input_file >> n;
+    file >> n;
 
     for (int i = 0; i < n; i++){
-        input_file >> profit[i]; 
+        file >> profit[i]; 
     }
     for (int i = 0; i < n; i++){
-        input_file >> deadline[i];
+        file >> deadline[i];
     }
-    input_file.close();
+    file.close();
 
     vector<int> job_indices(n);
     for (int i = 0; i < n; i++){
