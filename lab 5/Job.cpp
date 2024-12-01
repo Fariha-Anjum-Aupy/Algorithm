@@ -5,7 +5,7 @@ const int MAX_JOBS = 105;
 int profit[MAX_JOBS], deadline[MAX_JOBS];
 
 int main(){
-    ifstream input_file("jobs.txt"); 
+    ifstream input_file("jobs.txt");  
         if (!input_file) {
         cerr << "Error: Could not open the file!" << endl;
         return 1;
